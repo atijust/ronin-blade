@@ -1,0 +1,25 @@
+{
+    "name": "atijust/ronin-blade",
+    "description": "Laravel Blade template engine as a standalone component",
+    "keywords": ["template", "templating", "laravel", "blade", "view"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "atijust",
+            "email": "tsujita.shou@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "illuminate/view": "5.1.*",
+        "illuminate/events": "5.1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ronin\\": "src"
+        }
+    }
+}
