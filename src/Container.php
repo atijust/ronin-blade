@@ -29,10 +29,6 @@ class Container extends BaseContainer
             return new BladeCompiler($this['files'], $this['view.compiled']);
         });
 
-        $this->singleton('view.finder', function () {
-            return new FileViewFinder($this['files'], $this['view.paths']);
-        });
-
         $this->singleton('view.engine.resolver', function () {
             $resolver = new EngineResolver();
 
@@ -45,6 +41,10 @@ class Container extends BaseContainer
             });
 
             return $resolver;
+        });
+
+        $this->singleton('view.finder', function () {
+            return new FileViewFinder($this['files'], $this['view.paths']);
         });
 
         $this->singleton('view', function () {
